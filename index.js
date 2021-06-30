@@ -30,6 +30,13 @@ $(".equal").click(function(){
     }
 })
 
+$(".clear").click(function(){
+    currentNumber = 0;
+    previousNumber = 0;
+    $(".previousDisplay").val("");
+    $(".calculatorDisplay").val("");
+})
+
 
 function addition(previousNumber, currentNumber){
     $(".calculatorDisplay").val(parseInt(previousNumber) + parseInt(currentNumber));
