@@ -1,0 +1,5 @@
+theme purple: #3B4664
+dark purple: #191F32
+light purple: #627396
+cta orange: #D13F30
+cream white: #ECE4DB
