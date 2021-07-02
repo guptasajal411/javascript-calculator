@@ -17,6 +17,10 @@ body{
     color: #ECE4DB;
     background: #191F32;
     outline: red 5px;
+    direction: rtl;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 input::-webkit-outer-spin-button,
@@ -25,9 +29,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
     -moz-appearance: textfield;
-}
+} */
 
 .buttonContainer{
     width: 480px;
