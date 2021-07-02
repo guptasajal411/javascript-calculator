@@ -38,7 +38,7 @@ input[type=number] {
 button{
     background-color: #ECE4DB;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 7.5px;
     height: 130%;
     transform: scale(1.15);
     perspective: 1000px;
