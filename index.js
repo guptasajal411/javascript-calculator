@@ -180,8 +180,8 @@ $("body").keydown(function(event){
             break;
         case "Enter":
             $("#equal").addClass("pressed");
-            displayString = $("p").html();
-            alert(displayString);
+            stingString = (($("p").html()).substring(1));
+            alert(eval(stingString));
             break;
         case "r":
             $("#reset").addClass("pressed");
