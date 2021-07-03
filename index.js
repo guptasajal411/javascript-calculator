@@ -142,14 +142,14 @@ $("body").keydown(function(event){
             break;
         case "Delete":
             $("#del").addClass("pressed");
-            // var temp = $("p").html();
-            // if(temp.length > 1){
-            //     $("p").html(temp.slice(0, -1));
-            // }
-            // else{
-            //     console.log("cant delete more items!")
-            // }
-            // break;
+            var temp = $("p").html();
+            if(temp.length > 1){
+                $("p").html(temp.slice(0, -1));
+            }
+            else{
+                console.log("cant delete more items!")
+            }
+            break;
         case "+":
             $("#plus").addClass("pressed");
             var temp = $("p").html();
