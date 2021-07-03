@@ -25,6 +25,68 @@ $(".reset").click(function(){
     $("p").html("&#8203;");
 })
 
+$("#0").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "0");
+});
+$("#1").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "1");
+});
+$("#2").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "2");
+});
+$("#3").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "3");
+});
+$("#4").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "4");
+});
+$("#5").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "5");
+});
+$("#6").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "6");
+});
+$("#7").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "7");
+});
+$("#8").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "8");
+});
+$("#9").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "9");
+});
+$("#plus").click(function(){
+    var temp = $("p").html();
+    console.log("plus clicked");
+    $("p").html(temp + "+");
+});
+$("#-").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "-");
+});
+$("#x").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "*");
+});
+$("#divide").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + "/");
+});
+$("#decimal").click(function(){
+    var temp = $("p").html();
+    $("p").html(temp + ".");
+});
+
 $("body").keydown(function(event){
     console.log(event.key);
     switch (event.key) {
@@ -80,7 +142,14 @@ $("body").keydown(function(event){
             break;
         case "Delete":
             $("#del").addClass("pressed");
-            break;
+            // var temp = $("p").html();
+            // if(temp.length > 1){
+            //     $("p").html(temp.slice(0, -1));
+            // }
+            // else{
+            //     console.log("cant delete more items!")
+            // }
+            // break;
         case "+":
             $("#plus").addClass("pressed");
             var temp = $("p").html();
