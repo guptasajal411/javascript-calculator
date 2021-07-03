@@ -1,3 +1,5 @@
+var stingString;
+
 $("button").mousedown(function(event){
     $(this).addClass("pressed");
 });
@@ -7,7 +9,8 @@ $("button").mouseup(function(){
 });
 
 $(".equal").click(function(){
-    alert($("p").html());
+    stingString = (($("p").html()).substring(1));
+    alert(eval(stingString));
 })
 
 $(".delete").click(function(){
