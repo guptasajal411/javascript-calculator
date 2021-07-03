@@ -20,6 +20,11 @@ $(".delete").click(function(){
     }
 })
 
+$(".reset").click(function(){
+    var temp = $("p").html();
+    $("p").html("&#8203;");
+})
+
 $("body").keydown(function(event){
     console.log(event.key);
     switch (event.key) {
