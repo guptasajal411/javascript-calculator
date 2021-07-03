@@ -1,6 +1,7 @@
 var stingString;
 
-$("button").addClass("shadow")
+$("button").addClass("shadow");
+// $("button").addClass("border-info");
 
 $("button").mousedown(function(event){
     $(this).addClass("pressed");

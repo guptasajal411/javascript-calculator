@@ -2,7 +2,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto Mono', monospace;
-    background-color: #3B4664;
+    background: url(bg.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 .vertical-center{
@@ -41,7 +42,7 @@ body{
     width: 100%;
     font-size: 1.75rem;
     color: #ECE4DB;
-    background: #191F32;
+    background: #191f3269;
     outline: red 5px;
     white-space: nowrap;
     overflow: auto;
@@ -59,12 +60,13 @@ input::-webkit-inner-spin-button {
 
 .buttonContainer{
     width: 480px;
-    background-color: #191F32;
+    background-color: #191f3269;
     border-radius: 20px
 }
 
 button{
-    background-color: #ECE4DB;
+    background-color: #83838349;
+    color: white;
     width: 100%;
     border-radius: 7.5px;
     height: 130%;
@@ -73,7 +75,7 @@ button{
     transform-origin: center bottom 0px;
     transition-duration: .2s;
     font-size: 1.20rem;
-    border: 0;
+    border: 0px solid!important;
 }
 
 .delete{
@@ -100,4 +102,9 @@ button{
 
 .pressed {
     transform: scale(1);
+}
+
+.calculatorBody{
+    border: 1px solid;
+    border-radius: 20px;
 }
