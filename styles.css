@@ -9,7 +9,7 @@ body{
     height: 5px;
 }
   
-45.calculatorDisplay::-webkit-scrollbar-track {
+.calculatorDisplay::-webkit-scrollbar-track {
     border-radius: 10px;
 }
   
@@ -34,7 +34,6 @@ body{
     color: #ECE4DB;
     background: #191F32;
     outline: red 5px;
-    direction: rtl;
     white-space: nowrap;
     overflow: auto;
 }

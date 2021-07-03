@@ -9,8 +9,19 @@ $("button").mouseup(function(){
 $(".equal").click(function(){
     alert($("p").html());
 })
+
+$(".delete").click(function(){
+    var temp = $("p").html();
+    if(temp.length > 1){
+        $("p").html(temp.slice(0, -1));
+    }
+    else{
+        console.log("cant delete more items!")
+    }
+})
+
 $("body").keydown(function(event){
-    // console.log(event.key)
+    console.log(event.key);
     switch (event.key) {
         case "0":
             $("#0").addClass("pressed");
@@ -97,9 +108,22 @@ $("body").keydown(function(event){
             break;
         case "r":
             $("#reset").addClass("pressed");
+            var temp = $("p").html();
+            $("p").html("&#8203;");
             break;
         case "R":
             $("#reset").addClass("pressed");
+            var temp = $("p").html();
+            $("p").html("&#8203;");
+            break;
+        case "Backspace":
+            var temp = $("p").html();
+            if(temp.length > 1){
+                $("p").html(temp.slice(0, -1));
+            }
+            else{
+                console.log("cant delete more items!")
+            }
             break;
         default:
             console.log("another key pressed");
@@ -108,7 +132,6 @@ $("body").keydown(function(event){
 })
 
 $("body").keyup(function(event){
-    // console.log(event.key)
     switch (event.key) {
         case "0":
             $("#0").removeClass("pressed");
