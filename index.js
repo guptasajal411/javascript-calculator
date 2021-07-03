@@ -10,7 +10,7 @@ $("button").mouseup(function(){
 
 $(".equal").click(function(){
     stingString = (($("p").html()).substring(1));
-    alert(eval(stingString));
+    $("p").html("&#8203;" + eval(stingString));
 })
 
 $(".delete").click(function(){
@@ -19,7 +19,7 @@ $(".delete").click(function(){
         $("p").html(temp.slice(0, -1));
     }
     else{
-        console.log("cant delete more items!")
+        console.log("cant delete any more items!")
     }
 })
 
@@ -70,7 +70,6 @@ $("#9").click(function(){
 });
 $("#plus").click(function(){
     var temp = $("p").html();
-    console.log("plus clicked");
     $("p").html(temp + "+");
 });
 $("#-").click(function(){
@@ -91,7 +90,6 @@ $("#decimal").click(function(){
 });
 
 $("body").keydown(function(event){
-    console.log(event.key);
     switch (event.key) {
         case "0":
             $("#0").addClass("pressed");
@@ -181,7 +179,7 @@ $("body").keydown(function(event){
         case "Enter":
             $("#equal").addClass("pressed");
             stingString = (($("p").html()).substring(1));
-            alert(eval(stingString));
+            $("p").html("&#8203;" + eval(stingString));
             break;
         case "r":
             $("#reset").addClass("pressed");
@@ -199,11 +197,11 @@ $("body").keydown(function(event){
                 $("p").html(temp.slice(0, -1));
             }
             else{
-                console.log("cant delete more items!")
+                console.log("cant delete any more items!")
             }
             break;
         default:
-            console.log("another key pressed");
+            console.log("press a valid key!");
             break;
     }
 })
