@@ -24,6 +24,12 @@ $(".equal").click(function () {
     $("#copyButton").removeClass("collapse");
     $(".equal").removeAttr("data-bs-toggle");
     $(".equal").blur();
+    if(stingString == ""){
+        $(".historyDisplay").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString + "&nbsp;=");
+    }
+    else{
+        $(".historyDisplay").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString);
+    }
 })
 
 $("#copyButton").click(function () {
