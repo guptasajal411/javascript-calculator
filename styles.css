@@ -46,8 +46,12 @@ body{
     display: none;
 }
 
+.copyContainer{
+    height: 100%!important;
+}
+
 #copyButton{
-    height: 75%!important;
+    height: 100%!important;
     border: 1px dashed!important;
 }
 
