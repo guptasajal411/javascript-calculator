@@ -15,6 +15,16 @@ body{
     justify-content: center;
 }
 
+#copyButton{
+    height: 100%;
+    border: 1px dashed!important;
+}
+
+.pressCopy{
+    border: 1px dashed!important;
+    background-color: #70a3fc73!important;
+}
+
 .calculatorDisplay::-webkit-scrollbar {
     height: 5px;
 }

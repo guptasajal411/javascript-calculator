@@ -1,205 +1,312 @@
 var stingString;
 
-$("button").addClass("shadow");
-// $("button").addClass("border-info");
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(($(element).text()).substring(1)).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
 
-$("button").mousedown(function(event){
+$("button").addClass("shadow");
+
+$("button").mousedown(function (event) {
     $(this).addClass("pressed");
 });
 
-$("button").mouseup(function(){
+$("button").mouseup(function () {
     $(this).removeClass("pressed");
 });
 
-$(".equal").click(function(){
+$(".equal").click(function () {
     stingString = (($("p").html()).substring(1));
     $("p").html("&#8203;" + eval(stingString));
+    $("#copyButton").removeClass("collapse");
+    $(".equal").removeAttr("data-bs-toggle");
+    $(".equal").blur();
 })
 
-$(".delete").click(function(){
+$("#copyButton").click(function () {
+    $("#copyButton").addClass("pressCopy");
+    $("#copyButton").html("Copied!");
+})
+
+$(".delete").click(function () {
     var temp = $("p").html();
-    if(temp.length > 1){
+    if (temp.length > 1) {
         $("p").html(temp.slice(0, -1));
     }
-    else{
+    else {
         console.log("cant delete any more items!")
     }
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $(".delete").blur();
 })
 
-$(".reset").click(function(){
+$(".reset").click(function () {
     var temp = $("p").html();
     $("p").html("&#8203;");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $(".reset").blur();
+    $(".reset").blur();
 })
 
-$("#0").click(function(){
+$("#0").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "0");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#0").blur();
 });
-$("#1").click(function(){
+$("#1").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "1");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#1").blur();
 });
-$("#2").click(function(){
+$("#2").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "2");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#2").blur();
 });
-$("#3").click(function(){
+$("#3").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "3");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#3").blur();
 });
-$("#4").click(function(){
+$("#4").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "4");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#4").blur();
 });
-$("#5").click(function(){
+$("#5").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "5");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#5").blur();
 });
-$("#6").click(function(){
+$("#6").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "6");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#6").blur();
 });
-$("#7").click(function(){
+$("#7").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "7");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#7").blur();
 });
-$("#8").click(function(){
+$("#8").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "8");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#8").blur();
 });
-$("#9").click(function(){
+$("#9").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "9");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#9").blur();
 });
-$("#plus").click(function(){
+$("#plus").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "+");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#plus").blur();
 });
-$("#-").click(function(){
+$("#-").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "-");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#-").blur();
 });
-$("#x").click(function(){
+$("#x").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "*");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#x").blur();
 });
-$("#divide").click(function(){
+$("#divide").click(function () {
     var temp = $("p").html();
     $("p").html(temp + "/");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("#divide").blur();
 });
-$("#decimal").click(function(){
+$("#decimal").click(function () {
     var temp = $("p").html();
     $("p").html(temp + ".");
+    $("#copyButton").removeClass("pressCopy");
+    $("#copyButton").html("Copy");
+    $("").blur();
 });
 
-$("body").keydown(function(event){
+$("body").keydown(function (event) {
     switch (event.key) {
         case "0":
             $("#0").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "0");
+            $("p").html(temp + "0"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "1":
             $("#1").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "1");
+            $("p").html(temp + "1"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "2":
             $("#2").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "2");
+            $("p").html(temp + "2"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "3":
             $("#3").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "3");
+            $("p").html(temp + "3"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "4":
             $("#4").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "4");
+            $("p").html(temp + "4"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "5":
             $("#5").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "5");
+            $("p").html(temp + "5"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "6":
             $("#6").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "6");
+            $("p").html(temp + "6"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "7":
             $("#7").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "7");
+            $("p").html(temp + "7"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "8":
             $("#8").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "8");
+            $("p").html(temp + "8"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "9":
             $("#9").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "9");
+            $("p").html(temp + "9"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
-        case "Delete":
+        case "Delete": $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
             $("#del").addClass("pressed");
+
             var temp = $("p").html();
-            if(temp.length > 1){
+            if (temp.length > 1) {
                 $("p").html(temp.slice(0, -1));
             }
-            else{
+            else {
                 console.log("cant delete more items!")
             }
             break;
         case "+":
             $("#plus").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "+");
+            $("p").html(temp + "+"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "-":
             $("#-").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "-");
+            $("p").html(temp + "-"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "*":
             $("#x").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "*");
+            $("p").html(temp + "*"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "/":
             $("#divide").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + "/");
+            $("p").html(temp + "/"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case ".":
             $("#decimal").addClass("pressed");
             var temp = $("p").html();
-            $("p").html(temp + ".");
+            $("p").html(temp + "."); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "Enter":
-            $("#equal").addClass("pressed");
             stingString = (($("p").html()).substring(1));
             $("p").html("&#8203;" + eval(stingString));
+            $("#copyButton").removeClass("collapse");
+            $(".equal").removeAttr("data-bs-toggle");
+            $("#copyButton").blur();
             break;
         case "r":
             $("#reset").addClass("pressed");
             var temp = $("p").html();
-            $("p").html("&#8203;");
+            $("p").html("&#8203;"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "R":
             $("#reset").addClass("pressed");
             var temp = $("p").html();
-            $("p").html("&#8203;");
+            $("p").html("&#8203;"); $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
+
             break;
         case "Backspace":
+            $("#copyButton").removeClass("pressCopy");
+            $("#copyButton").html("Copy");
             var temp = $("p").html();
-            if(temp.length > 1){
+            if (temp.length > 1) {
                 $("p").html(temp.slice(0, -1));
             }
-            else{
+            else {
                 console.log("cant delete any more items!")
             }
             break;
@@ -209,7 +316,7 @@ $("body").keydown(function(event){
     }
 })
 
-$("body").keyup(function(event){
+$("body").keyup(function (event) {
     switch (event.key) {
         case "0":
             $("#0").removeClass("pressed");

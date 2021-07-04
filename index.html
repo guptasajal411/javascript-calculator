@@ -27,6 +27,12 @@
     <div class="vertical-center">
         <div class="container displayContainer ">
             <div class="row">
+                <div class="col-9"></div>
+                <div class="col-3 px-2 py-0">
+                    <button class="float-end collapse" id="copyButton" onclick='copyToClipboard("p")'>Copy</button>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12 p-0 displayColumn">
                     <p class="calculatorDisplay py-3 px-4 calculatorBody border-info shadow-lg">&#8203;</p>
                 </div>
@@ -95,7 +101,8 @@
                         <button class="reset" id="reset">Reset</button>
                     </div>
                     <div class="col-6">
-                        <button class="equal" id="equal">=</button>
+                        <button class="equal" id="equal" data-bs-toggle="collapse" href="#copyButton" role="button"
+                            aria-expanded="false" aria-controls="copyButton">=</button>
                     </div>
                 </div>
             </div>
