@@ -15,6 +15,11 @@ body{
     justify-content: center;
 }
 
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+
 .historyDisplay{
     border-radius: 5px!important;
     font-size: 1.25rem;
@@ -24,8 +29,25 @@ body{
     text-align: left;
 }
 
+.historyDisplay::-webkit-scrollbar {
+    height: 5px;
+}
+  
+.historyDisplay::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+  
+.historyDisplay::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #D13F30;
+}
+  
+.historyDisplay::-webkit-scrollbar:vertical {
+    display: none;
+}
+
 #copyButton{
-    height: 100%!important;
+    height: 75%!important;
     border: 1px dashed!important;
 }
 

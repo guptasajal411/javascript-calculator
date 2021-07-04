@@ -24,11 +24,11 @@ $(".equal").click(function () {
     $("#copyButton").removeClass("collapse");
     $(".equal").removeAttr("data-bs-toggle");
     $(".equal").blur();
-    if(stingString == ""){
-        $(".historyDisplay").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString + "&nbsp;=");
+    if(stingString != ""){
+        $(".wrapper").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString + "&nbsp;=");
     }
     else{
-        $(".historyDisplay").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString);
+        $(".wrapper").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString);
     }
 })
 
@@ -290,6 +290,12 @@ $("body").keydown(function (event) {
             $("#copyButton").removeClass("collapse");
             $(".equal").removeAttr("data-bs-toggle");
             $("#copyButton").blur();
+            if(stingString != ""){
+                $(".wrapper").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString + "&nbsp;=");
+            }
+            else{
+                $(".wrapper").html('<span class="material-icons-outlined">history</span>&nbsp;' + stingString);
+            }
             break;
         case "r":
             $("#reset").addClass("pressed");
