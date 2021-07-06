@@ -153,3 +153,9 @@ button{
     border: 1px solid;
     border-radius: 20px;
 }
+
+@media only screen and (max-width: 576px){
+    .vertical-center{
+        transform: scale(0.75);
+    }
+}
